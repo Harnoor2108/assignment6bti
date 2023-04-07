@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
+<<<<<<< HEAD
 const userService = require("./user-service.js");
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
@@ -10,6 +11,13 @@ const passportJWT = require("passport-jwt");
 
 const requireAuth = passport.authenticate("jwt", { session: false });
 
+=======
+
+const userService = require("./user-service.js");
+const jwt = require('jsonwebtoken');
+const passport = require('passport');
+const passportJWT = require('passport-jwt');
+>>>>>>> 41ba53446400557ba5b1b4f01609180dd6e18df7
 const HTTP_PORT = process.env.PORT || 8080;
 
 // JSON Web Token Setup
@@ -173,4 +181,8 @@ userService
   .catch((err) => {
     console.log("unable to start the server: " + err);
     process.exit();
+<<<<<<< HEAD
   });
+=======
+});
+>>>>>>> 41ba53446400557ba5b1b4f01609180dd6e18df7
